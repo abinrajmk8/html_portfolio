@@ -1,9 +1,27 @@
-<h1>The Best Movies According to Angela</h1>
-<h2>My top 3 movies of all-time.</h2>
-<hr />
-<h3>Spirited Away</h3>
-<p>This is my favourite anime. I love the beautiful images.</p>
-<h3>Ex Machina</h3>
-<p>Really cool sci-fi movie.</p>
-<h3>Drive</h3>
-<p>Super beautiful film. Really artistic.</p>
+<!DOCTYPE html>
+<html>
+<body  onload="getLocation()">
+
+<div style="width:50%;height:0;padding-bottom:76%;position:relative;"><iframe src="https://giphy.com/embed/8v6Z3YyULB5Q0Skbac" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
